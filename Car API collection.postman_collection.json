@@ -17,14 +17,14 @@
 					"raw": "{\n    \"name\": \"pranshu\",\n    \"dept\": \"CSE\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9000/employee",
+					"raw": "http://localhost:9000/car",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "9000",
 					"path": [
-						"employee"
+						"car"
 					]
 				}
 			},
