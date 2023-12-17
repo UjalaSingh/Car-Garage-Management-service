@@ -9,6 +9,8 @@
 - start docker desktop or docker
 - then run this command - 
   > docker run --name gofr-mysql -e MYSQL_ROOT_PASSWORD=root123 -e MYSQL_DATABASE=test_db -p 3306:3306 -d mysql:8.0.30
+
+- if you are having trouble creating an image because of a port try changing the port number in the docker command and .env file in the config folder.
 - run this command `go run main.go`
 - you can test all the APIs using postman [download and test API](/Car%20API%20collection.postman_collection.json) 
 
