@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"pranshu\",\n    \"dept\": \"CSE\"\n}"
+					"raw": "{\n    \"name\": \"Tesla\",\n    \"color\": \"Black\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:9000/car",
@@ -57,7 +57,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"samayk\",\n    \"color\": \"okay\"\n}"
+					"raw": "{\n    \"name\": \"honda\",\n    \"color\": \"green\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:9000/car/22",

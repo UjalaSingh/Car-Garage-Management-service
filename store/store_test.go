@@ -34,7 +34,7 @@ func newMock(t *testing.T) (*gofr.Context, sqlmock.Sqlmock) {
 
 func Test_Create(t *testing.T) {
 	ctx, mock := newMock(t)
-	car := &model.Car{ID: 1, Name: "SAMPLE-NAME", Color: "tech"}
+	car := &model.Car{ID: 1, Name: "SAMPLE-NAME", Color: "xyz"}
 
 	testCases := []struct {
 		desc        string
@@ -47,7 +47,7 @@ func Test_Create(t *testing.T) {
 			mock.ExpectExec(createQuery).
 				WillReturnError(errors.Error("error from db"))}, input: car, expectedErr: errors.DB{Err: errors.Error("error from db")},
 		},
-		{desc: "success case", input: &model.Car{ID: 1, Name: "SAMPLE-NAME", Color: "tech"},
+		{desc: "success case", input: &model.Car{ID: 1, Name: "SAMPLE-NAME", Color: "xyz"},
 			dbMock: []interface{}{
 				mock.ExpectExec(createQuery).WillReturnResult(sqlmock.NewResult(1, 1)).WillReturnError(nil)},
 			expectedRes: car, expectedErr: nil},
@@ -75,8 +75,8 @@ func Test_GetByID(t *testing.T) {
 		{desc: "success case", input: 1,
 			dbMock: []interface{}{mock.ExpectQuery(getByIDQuery).
 				WillReturnRows(sqlmock.NewRows([]string{"id", "name", "color"}).AddRow(1,
-					"SAMPLE-NAME", "tech"))},
-			expOutput:   &model.Car{ID: 1, Name: "SAMPLE-NAME", Color: "tech"},
+					"SAMPLE-NAME", "xyz"))},
+			expOutput:   &model.Car{ID: 1, Name: "SAMPLE-NAME", Color: "xyz"},
 			expectedErr: nil},
 		{desc: "failure case", input: 1,
 			dbMock: []interface{}{mock.ExpectQuery(getByIDQuery).
